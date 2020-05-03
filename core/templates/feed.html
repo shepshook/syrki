@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if posts_list %}
+
+        <div class="mx-auto card-deck">
+            {% for post in posts_list %}
+                <div class="col-md-4">
+                        <div class="card mx-0 mb-4 shadow-sm">
+                            <div class="card-header justify-content-between align-items-center w-100 d-flex">
+                                <a class="text-info" href="{% url "user-details" post.user %}">@{{ post.user }}</a>
+                                <small class="text-muted text">{{ post.date_str }}</small>
+                            </div>
+                            <a href="{{ post.get_url }}">
+                                <img class="w-100 h-auto" src="{{ post.image.url }}" alt=""/>
+                            </a>
+                            <p class="card-body">{{ post.content }}</p>
+                        </div>
+                </div>
+            {% endfor %}
+        </div>
+
+{% endif %}
+
+{% endblock %}

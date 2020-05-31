@@ -23,18 +23,18 @@ class Post(models.Model):
 
     def date_str(self):
         delta = now() - self.publication_date
-        if delta.seconds < 60:
-            return f"{int(delta.seconds)} secs ago"
-        elif delta.seconds < 3600:
-            return f"{int(delta.seconds / 60)} mins ago"
-        elif delta.days == 0:
-            return f"{int(delta.seconds / 3600)} hours ago"
-        elif delta.days < 7:
-            return f"{int(delta.days)} days ago"
-        elif delta.days < 365:
-            return f"{int(delta.days / 7)} weeks ago"
-        else:
+        if delta.days > 365:
             return f"{int(delta.days / 365)} years ago"
+        elif delta.days > 7:
+            return f"{int(delta.days / 7)} weeks ago"
+        elif delta.days > 0:
+            return f"{int(delta.days)} days ago"
+        elif delta.seconds > 3600:
+            return f"{int(delta.seconds / 3600)} hours ago"
+        elif delta.seconds > 60:
+            return f"{int(delta.seconds / 60)} mins ago"
+        else:
+            return f"{int(delta.seconds)} secs ago"
 
     def get_url(self):
         return reverse("post-details", args=[str(self.id)])
@@ -55,15 +55,15 @@ class Comment(models.Model):
 
     def date_str(self):
         delta = now() - self.publication_date
-        if delta.seconds < 60:
-            return f"{int(delta.seconds)} secs ago"
-        elif delta.seconds < 3600:
-            return f"{int(delta.seconds / 60)} mins ago"
-        elif delta.days == 0:
-            return f"{int(delta.seconds / 3600)} hours ago"
-        elif delta.days < 7:
-            return f"{int(delta.days)} days ago"
-        elif delta.days < 365:
-            return f"{int(delta.days / 7)} weeks ago"
-        else:
+        if delta.days > 365:
             return f"{int(delta.days / 365)} years ago"
+        elif delta.days > 7:
+            return f"{int(delta.days / 7)} weeks ago"
+        elif delta.days > 0:
+            return f"{int(delta.days)} days ago"
+        elif delta.seconds > 3600:
+            return f"{int(delta.seconds / 3600)} hours ago"
+        elif delta.seconds > 60:
+            return f"{int(delta.seconds / 60)} mins ago"
+        else:
+            return f"{int(delta.seconds)} secs ago"

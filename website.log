@@ -1,0 +1,78 @@
+DEBUG:Using selector: EpollSelector
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader
+INFO:/home/shepshook/term4/isp/website/website/manage.py changed, reloading.
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader
+INFO:/home/shepshook/term4/isp/website/website/core/views/post.py changed, reloading.
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader
+WARNING:Not Found: /favicon.ico
+DEBUG:Importing BlpImagePlugin
+DEBUG:Importing BmpImagePlugin
+DEBUG:Importing BufrStubImagePlugin
+DEBUG:Importing CurImagePlugin
+DEBUG:Importing DcxImagePlugin
+DEBUG:Importing DdsImagePlugin
+DEBUG:Importing EpsImagePlugin
+DEBUG:Importing FitsStubImagePlugin
+DEBUG:Importing FliImagePlugin
+DEBUG:Importing FpxImagePlugin
+DEBUG:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:Importing FtexImagePlugin
+DEBUG:Importing GbrImagePlugin
+DEBUG:Importing GifImagePlugin
+DEBUG:Importing GribStubImagePlugin
+DEBUG:Importing Hdf5StubImagePlugin
+DEBUG:Importing IcnsImagePlugin
+DEBUG:Importing IcoImagePlugin
+DEBUG:Importing ImImagePlugin
+DEBUG:Importing ImtImagePlugin
+DEBUG:Importing IptcImagePlugin
+DEBUG:Importing JpegImagePlugin
+DEBUG:Importing Jpeg2KImagePlugin
+DEBUG:Importing McIdasImagePlugin
+DEBUG:Importing MicImagePlugin
+DEBUG:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:Importing MpegImagePlugin
+DEBUG:Importing MpoImagePlugin
+DEBUG:Importing MspImagePlugin
+DEBUG:Importing PalmImagePlugin
+DEBUG:Importing PcdImagePlugin
+DEBUG:Importing PcxImagePlugin
+DEBUG:Importing PdfImagePlugin
+DEBUG:Importing PixarImagePlugin
+DEBUG:Importing PngImagePlugin
+DEBUG:Importing PpmImagePlugin
+DEBUG:Importing PsdImagePlugin
+DEBUG:Importing SgiImagePlugin
+DEBUG:Importing SpiderImagePlugin
+DEBUG:Importing SunImagePlugin
+DEBUG:Importing TgaImagePlugin
+DEBUG:Importing TiffImagePlugin
+DEBUG:Importing WebPImagePlugin
+DEBUG:Importing WmfImagePlugin
+DEBUG:Importing XbmImagePlugin
+DEBUG:Importing XpmImagePlugin
+DEBUG:Importing XVThumbImagePlugin
+INFO:New post of user user created
+WARNING:Not Found: /favicon.ico
+INFO:/home/shepshook/term4/isp/website/website/core/views/post.py changed, reloading.
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader
+INFO:User user3 registered
+INFO:New comment of user user3 posted to post b69ef000-8972-45e8-8071-f2f77ff4f2d2
+INFO:User user3 unliked post b69ef000-8972-45e8-8071-f2f77ff4f2d2
+INFO:User user3 liked post b69ef000-8972-45e8-8071-f2f77ff4f2d2
+INFO:/home/shepshook/term4/isp/website/website/core/views/post.py changed, reloading.
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Start logging
+DEBUG:Using selector: EpollSelector
+INFO:Watching for file changes with StatReloader

@@ -2,10 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import logging
 
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'website.settings')
+    logging.basicConfig(filename="website.log", format="%(levelname)s:%(message)s", level=logging.DEBUG)
+    logging.info("Start logging")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

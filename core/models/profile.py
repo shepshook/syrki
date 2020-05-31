@@ -7,7 +7,7 @@ from django.shortcuts import reverse
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="img", blank=True, null=True)
+    image = models.ImageField(upload_to="user", default="user.png")
 
     def __str__(self):
         return self.user.username

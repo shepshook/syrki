@@ -5,7 +5,10 @@
     <div class="card">
         <div class="row pr-3">
             <div class="col-md-8 d-flex flex-column justify-content-around pr-0">
-                <a class="card-title m-3 lead text-info" href="{% url "user-details" post.user %}">@{{ post.user }}</a>
+                <a class="card-title m-3 lead text-info" href="{% url "user-details" post.user %}">
+                    <img class="m-2 rounded-circle" src="/media/{{ post.user.image }}" width="50" height="50" alt=""/>
+                    @{{ post.user }}
+                </a>
                 <img class="w-100 h-auto" src="{{ post.image.url }}" alt=""/>
             </div>
             <div class="col-md-4 py-3 bg-light">
@@ -27,10 +30,10 @@
                                     <div class="card d-flex flex-row mb-2 p-1">
                                         <div class="d-flex w-100 flex-column">
                                             <div class="d-flex w-100 justify-content-between mb-1">
-                                                <div class="mr-auto">
-                                                    <img class="mr-1 rounded-circle" src="https://dummyimage.com/30x30/ffe226/000000.png&text=hehe" width="30" height="30" alt=""/>
-                                                    <a class="text-info" href="{% url "user-details" comment.user %}">@{{ comment.user }}</a>
-                                                </div>
+                                                <a class="text-info mr-auto" href="{% url "user-details" comment.user %}">
+                                                    <img class="mr-1 rounded-circle" src="/media/{{ comment.user.image }}" width="30" height="30" alt=""/>
+                                                    @{{ comment.user }}
+                                                </a>
                                                 <small class="text-muted ml-auto">{{ comment.date_str }}</small>
                                             </div>
                                             <div class="d-flex flex-row text-break p-1">

@@ -1,6 +1,7 @@
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.timezone import now
+import logging
 
 from core.forms.post import PostForm, CommentForm
 from core.models.post import Post, Comment
@@ -14,17 +15,14 @@ def feed(request):
 def create_post(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
-        print("POST request")
         if form.is_valid():
-            print("form is valid")
             post = Post()
             post.publication_date = now()
             post.user_id = Profile.objects.filter(user_id=request.user.id).first().id
             post.image = request.FILES["image"]
             post.content = form.cleaned_data.get("content")
-            print(post.image)
-            print(post.content)
             post.save()
+            logging.info("New post of user %s created", request.user.username)
             return HttpResponseRedirect("/")
     else:
         form = PostForm()
@@ -43,6 +41,7 @@ def post_details(request, pk):
                 comment.content = form.cleaned_data.get("content")
                 comment.post = post
                 comment.save()
+                logging.info("New comment of user %s posted to post %s", request.user.username, post.id)
 
         form = CommentForm()
         comments = Comment.objects.filter(post_id=pk)
@@ -59,7 +58,9 @@ def post_like(request, pk):
         user = Profile.objects.get(user=request.user)
         if user in post.likes.all():
             post.likes.remove(user)
+            logging.info("User %s disliked post %s", request.user.username, post.id)
         else:
             post.likes.add(user)
+            logging.info("User %s liked post %s", request.user.username, post.id)
 
     return HttpResponseRedirect(post.get_url())

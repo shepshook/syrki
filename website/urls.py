@@ -28,5 +28,5 @@ urlpatterns = [
     path("user/registration", profile.user_registration, name="user-registration"),
     path("user/<str:username>", profile.user_details, name="user-details"),
     path("user/<str:username>/settings", profile.user_settings, name="user-settings")
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) +\
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
